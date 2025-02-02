@@ -9,17 +9,25 @@
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f5f5f5;
+      background-color: #f0f0f0;
       color: #333;
+      box-sizing: border-box;
     }
     header {
-      background-color: #333;
+      background-color: #222;
       color: white;
-      padding: 20px 0;
+      padding: 50px 20px;
       text-align: center;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     }
     header h1 {
+      font-size: 3rem;
       margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      font-weight: 300;
     }
     .container {
       max-width: 1200px;
@@ -27,40 +35,101 @@
       padding: 20px;
     }
     section {
-      margin: 40px 0;
+      margin: 60px 0;
     }
+    #about p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #666;
+    }
+
+    #portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
     .portfolio-item {
       background-color: white;
-      margin-bottom: 20px;
-      padding: 20px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .portfolio-item:hover {
       transform: translateY(-10px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     }
+
     .portfolio-item img {
       width: 100%;
-      height: auto;
-      border-radius: 8px;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
     }
+
+    .portfolio-item img:hover {
+      transform: scale(1.1);
+    }
+
     .portfolio-item h2 {
+      padding: 20px;
       font-size: 1.5rem;
-      margin-top: 10px;
+      margin: 0;
+      color: #333;
     }
+
+    .portfolio-item p {
+      padding: 0 20px 20px;
+      font-size: 1rem;
+      color: #777;
+      line-height: 1.4;
+    }
+
     footer {
-      background-color: #333;
+      background-color: #222;
       color: white;
       text-align: center;
-      padding: 10px;
-      position: absolute;
-      width: 100%;
+      padding: 20px;
+      position: relative;
       bottom: 0;
+      width: 100%;
     }
+
     .social-links a {
-      margin: 0 10px;
+      margin: 0 15px;
       color: white;
       text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #1db954;
+    }
+
+    /* Responsive design for smaller screens */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      .container {
+        padding: 10px;
+      }
+
+      #portfolio {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .portfolio-item img {
+        height: 150px;
+      }
     }
   </style>
 </head>
@@ -75,7 +144,7 @@
     <!-- About Section -->
     <section id="about">
       <h2>About Me</h2>
-      <p>Hi, I'm Bilgehan Altay. I'm a passionate UX Designer with a strong background in web and mobile app development. I have worked on projects involving user experience, UI/UX design, and mobile banking solutions. I specialize in creating innovative, user-centered designs that solve complex problems and improve user satisfaction. Check out some of my work below!</p>
+      <p>Hi, I'm Bilgehan Altay. A passionate UX Designer and Developer with a strong background in creating user-centered designs and innovative mobile solutions. With a proven track record in both web and mobile app development, I thrive on solving complex challenges and delivering intuitive, engaging user experiences. Check out some of my work below!</p>
     </section>
 
     <!-- Portfolio Section -->
@@ -85,13 +154,19 @@
       <div class="portfolio-item">
         <img src="your-project-image.jpg" alt="Project 1">
         <h2>Project 1</h2>
-        <p>This is a brief description of your project. You can talk about the tools you used and what challenges you overcame.</p>
+        <p>Project description goes here. You can talk about the tools used, the design challenges, and how you solved them to create a better user experience.</p>
       </div>
 
       <div class="portfolio-item">
         <img src="your-project-image.jpg" alt="Project 2">
         <h2>Project 2</h2>
-        <p>This is a brief description of another project. Include any notable details or highlights from the project.</p>
+        <p>This project was focused on enhancing user experience through effective design. Explore how I leveraged UI/UX principles to achieve outstanding results.</p>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="your-project-image.jpg" alt="Project 3">
+        <h2>Project 3</h2>
+        <p>A brief description of another key project. This could include the challenges faced, and how your solution benefited the project’s success.</p>
       </div>
     </section>
   </div>
@@ -100,9 +175,8 @@
   <footer>
     <p>Connect with me on:</p>
     <div class="social-links">
-      <a href="https://www.linkedin.com/in/bilgehanaltay">LinkedIn</a>
-      <a href="https://github.com/bilgehanaltay">GitHub</a>
-      <a href="https://twitter.com/bilgehanaltay">Twitter</a>
+      <a href="https://www.linkedin.com/in/bilgehan-altay/">LinkedIn</a>
+      <a href="https://github.com/blghnaltay">GitHub</a>
     </div>
     <p>&copy; 2025 Bilgehan Altay. All rights reserved.</p>
   </footer>
