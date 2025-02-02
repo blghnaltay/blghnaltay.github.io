@@ -5,221 +5,192 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bilgehan Altay - Portfolio</title>
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f0f0f0;
-      color: #333;
       box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fff;
+      color: #000;
+      line-height: 1.6;
       overflow-x: hidden;
     }
+
     header {
-      background-color: #222;
-      color: white;
-      padding: 80px 20px;
+      background: none;
+      color: black;
       text-align: center;
+      padding: 60px 20px;
       position: relative;
-      z-index: 10;
     }
-    header h1 {
-      font-size: 3.5rem;
-      margin: 0;
-      font-weight: 700;
-      letter-spacing: 2px;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      font-weight: 300;
-    }
+
     nav {
       position: absolute;
       top: 20px;
-      right: 20px;
-      font-size: 1.2rem;
+      right: 40px;
     }
+
     nav a {
-      color: white;
+      color: black;
       text-decoration: none;
       margin: 0 15px;
-      font-weight: 600;
+      font-weight: bold;
+      transition: color 0.3s ease;
     }
+
     nav a:hover {
-      color: #1db954;
+      color: gray;
     }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 40px 20px;
     }
+
     section {
-      margin: 100px 0;
+      margin: 60px 0;
     }
+
+    #about {
+      text-align: center;
+    }
+
     #about p {
       font-size: 1.1rem;
-      line-height: 1.6;
-      color: #666;
+      color: #333;
+      max-width: 800px;
+      margin: 20px auto;
     }
 
     #portfolio {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 30px;
-      padding-bottom: 50px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
     }
 
     .portfolio-item {
       background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border: 1px solid #000;
+      border-radius: 10px;
       overflow: hidden;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .portfolio-item:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
     .portfolio-item img {
       width: 100%;
-      height: 300px;
+      height: 200px;
       object-fit: cover;
-      transition: transform 0.3s ease;
     }
 
-    .portfolio-item img:hover {
-      transform: scale(1.1);
-    }
-
-    .portfolio-item h2 {
+    .portfolio-content {
       padding: 20px;
+    }
+
+    .portfolio-content h2 {
       font-size: 1.5rem;
-      margin: 0;
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    .portfolio-content p {
+      font-size: 0.95rem;
       color: #333;
     }
 
-    .portfolio-item p {
-      padding: 0 20px 20px;
-      font-size: 1rem;
-      color: #777;
-      line-height: 1.4;
-    }
-
     footer {
-      background-color: #222;
-      color: white;
+      background: none;
+      color: black;
       text-align: center;
       padding: 20px;
-      position: relative;
-      bottom: 0;
-      width: 100%;
     }
 
     .social-links a {
-      margin: 0 15px;
-      color: white;
+      color: black;
+      margin: 0 10px;
       text-decoration: none;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       transition: color 0.3s ease;
     }
 
     .social-links a:hover {
-      color: #1db954;
+      color: gray;
     }
 
-    /* Full screen background image */
-    .fullscreen-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('your-background-image.jpg') center/cover no-repeat;
-      z-index: -1;
-      opacity: 0.7;
-    }
-
-    /* Responsive design for smaller screens */
     @media (max-width: 768px) {
       header h1 {
         font-size: 2.5rem;
       }
 
-      header p {
-        font-size: 1rem;
-      }
-
-      .container {
-        padding: 10px;
-      }
-
-      #portfolio {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .portfolio-item img {
-        height: 200px;
+      nav a {
+        font-size: 0.9rem;
       }
     }
   </style>
 </head>
 <body>
-
-  <!-- Fullscreen Background -->
-  <div class="fullscreen-bg"></div>
-
   <header>
     <nav>
       <a href="#about">About</a>
       <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
     </nav>
     <h1>Bilgehan Altay</h1>
-    <p>Developer | Designer | Creator</p>
+    <p>UX Designer and Indie Maker</p>
   </header>
 
   <div class="container">
-    <!-- About Section -->
     <section id="about">
       <h2>About Me</h2>
-      <p>Hi, I'm Bilgehan Altay, a passionate UX Designer and Developer with expertise in crafting user-centered experiences and solutions. I specialize in web and mobile app development, with a focus on designing beautiful and functional user interfaces. Check out some of my work below and get in touch if you'd like to collaborate!</p>
+      <p>I'm Bilgehan Altay, a UX Designer and Indie Maker passionate about creating intuitive and visually compelling digital experiences. My focus is on combining functionality with aesthetic appeal, ensuring every project delivers an outstanding user journey.</p>
     </section>
 
-    <!-- Portfolio Section -->
     <section id="portfolio">
-      <h2>My Portfolio</h2>
+      <h2 style="text-align: center; margin-bottom: 20px;">My Work</h2>
 
       <div class="portfolio-item">
-        <img src="your-project-image.jpg" alt="Project 1">
-        <h2>Project 1</h2>
-        <p>This is a brief description of your project. You can talk about the tools you used, the challenges you overcame, and the results of the project.</p>
+        <img src="https://picsum.photos/600/400?random=1" alt="Project 1">
+        <div class="portfolio-content">
+          <h2>Project Title 1</h2>
+          <p>A brief description of the project highlighting key features and outcomes.</p>
+        </div>
       </div>
 
       <div class="portfolio-item">
-        <img src="your-project-image.jpg" alt="Project 2">
-        <h2>Project 2</h2>
-        <p>This is a brief description of another project. Include details about the tools and technologies used and how the project impacted users or the business.</p>
-      </div>
-
-      <div class="portfolio-item">
-        <img src="your-project-image.jpg" alt="Project 3">
-        <h2>Project 3</h2>
-        <p>A brief description of a different project. Highlight any unique challenges and the solutions you implemented to enhance the user experience.</p>
+        <img src="https://picsum.photos/600/400?random=2" alt="Project 2">
+        <div class="portfolio-content">
+          <h2>Project Title 2</h2>
+          <p>Details about the project, tools used, and the impact it made.</p>
+        </div>
       </div>
     </section>
   </div>
 
-  <!-- Footer Section -->
-  <footer>
-    <p>Connect with me on:</p>
+  <footer id="contact">
+    <p>Let's Connect!</p>
     <div class="social-links">
       <a href="https://www.linkedin.com/in/bilgehan-altay/">LinkedIn</a>
       <a href="https://github.com/blghnaltay">GitHub</a>
     </div>
     <p>&copy; 2025 Bilgehan Altay. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
