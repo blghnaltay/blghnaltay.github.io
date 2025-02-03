@@ -15,12 +15,12 @@ Welcome to my personal portfolio website showcasing my work as a **UX Designer a
 ## 📂 Project Structure
 ```
 ├── index.html
-├── assets
-│ ├── icons
-│ └── screenshots
-├── favicon-32x32.png
-├── favicon-16x16.png
-└── site.webmanifest
+├── favicon_io
+│ ├── favicon-32x32.png
+│ └── favicon-16x16.png
+│ └── site.webmanifest
+├── README.md
+└── .gitignore
 ```
 
 ## 🌍 Live Demo
