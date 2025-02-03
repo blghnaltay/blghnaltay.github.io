@@ -76,43 +76,41 @@
     }
 
     #portfolio {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
       margin-top: 20px;
     }
 
-    .portfolio-item {
+    .work-section {
+      margin-bottom: 40px;
+    }
+
+    .work-title {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .work-item {
       background-color: white;
       border: 1px solid #000;
       border-radius: 10px;
-      overflow: hidden;
+      margin: 20px 0;
+      padding: 20px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .portfolio-item:hover {
+    .work-item:hover {
       transform: translateY(-10px);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
-    .portfolio-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .portfolio-content {
-      padding: 20px;
-    }
-
-    .portfolio-content h2 {
+    .work-item h3 {
       font-size: 1.5rem;
       color: #000;
       margin-bottom: 10px;
     }
 
-    .portfolio-content p {
-      font-size: 0.95rem;
+    .work-item p {
+      font-size: 1rem;
       color: #333;
     }
 
@@ -150,7 +148,7 @@
   <header>
     <nav>
       <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
+      <a href="#portfolio">Works</a>
       <a href="#contact">Contact</a>
     </nav>
     <h1>Bilgehan Altay</h1>
@@ -164,45 +162,61 @@
     </section>
 
     <section id="portfolio">
-      <h2 style="text-align: center; margin-bottom: 20px;">My Work</h2>
+      <h2 class="work-title">Works</h2>
 
-      <div class="portfolio-item">
-        <img src="https://picsum.photos/600/400?random=1" alt="Atmosfer App">
-        <div class="portfolio-content">
-          <h2>Atmosfer App (Turkcell)</h2>
-          <p>An iterative design approach optimized the user interface. Continuous testing and user feedback led to enhanced usability.</p>
+      <div class="work-section">
+        <h3>Inofab Health</h3>
+        <div class="work-item">
+          <h4>Spirohome Personal</h4>
+          <p>Designed the mobile app for conducting lung function tests with the world’s first personal ultrasonic spirometer, enabling users to track lung health trends effectively.</p>
+        </div>
+        <div class="work-item">
+          <h4>Spirohome Clinic</h4>
+          <p>Created the user interface for SpiroClinic Pro, integrating smart dock capabilities and hospital electronic health record systems for advanced clinical spirometry.</p>
+        </div>
+        <div class="work-item">
+          <h4>Spirocloud</h4>
+          <p>Developed the SpiroCloud web dashboard, facilitating remote respiratory disease management by analyzing data from connected spirometers.</p>
         </div>
       </div>
 
-      <div class="portfolio-item">
-        <img src="https://picsum.photos/600/400?random=2" alt="Turkcell Life Redesign">
-        <div class="portfolio-content">
-          <h2>Turkcell Life Redesign</h2>
-          <p>Applied parallel design methods to develop alternative solutions. User testing helped identify the most effective design strategy.</p>
+      <div class="work-section">
+        <h3>Amaris Consulting / Turkcell</h3>
+        <div class="work-item">
+          <h4>Atmosfer</h4>
+          <p>Redesigned the Atmosfer platform from scratch for managing sales performance and operations, winning the 2023 GOLD STEVIE®️ Award for Sales & Customer Services.</p>
+        </div>
+        <div class="work-item">
+          <h4>Ultia</h4>
+          <p>Contributed to the design of Ultia, a low-code/no-code platform empowering businesses to develop innovative applications without programming expertise.</p>
+        </div>
+        <div class="work-item">
+          <h4>T.Life</h4>
+          <p>Supported the design of T.Life, enhancing Turkcell’s internal communication with engaging content for employees and potential candidates.</p>
+        </div>
+        <div class="work-item">
+          <h4>Additional Projects</h4>
+          <p>Provided design support for multiple Turkcell projects including SOLID, Android POS, Social AI, Atmosware, and Turkcell Kariyerim.</p>
         </div>
       </div>
 
-      <div class="portfolio-item">
-        <img src="https://picsum.photos/600/400?random=3" alt="Video Banking Improvement">
-        <div class="portfolio-content">
-          <h2>Video Banking Improvement (Fibabanka)</h2>
-          <p>Competitive testing and analysis of industry trends led to the development of a user-friendly video banking experience.</p>
+      <div class="work-section">
+        <h3>Fibabanka</h3>
+        <div class="work-item">
+          <h4>Retail Banking</h4>
+          <p>Worked on video banking, payment requests, dashboards, and global market features, contributing to user-friendly financial solutions.</p>
         </div>
-      </div>
-
-      <div class="portfolio-item">
-        <img src="https://picsum.photos/600/400?random=4" alt="ATM Transformation">
-        <div class="portfolio-content">
-          <h2>ATM Transformation Project (Fibabanka)</h2>
-          <p>User-centered design processes enhanced ATM interfaces, making them more intuitive through detailed user interviews and feedback.</p>
+        <div class="work-item">
+          <h4>Corporate Banking</h4>
+          <p>Led redesign initiatives and developed new features for corporate banking apps, enhancing functionality for check applications, vehicle pledges, and more.</p>
         </div>
-      </div>
-
-      <div class="portfolio-item">
-        <img src="https://picsum.photos/600/400?random=5" alt="Core Banking Screens Transformation">
-        <div class="portfolio-content">
-          <h2>Core Banking Screens Transformation (Fibabanka)</h2>
-          <p>Implemented A/B testing and iterative design cycles to continuously improve the user experience and optimize performance.</p>
+        <div class="work-item">
+          <h4>Core Systems</h4>
+          <p>Focused on transforming and renewing Core/Mercan screens to improve operational efficiency and user experience.</p>
+        </div>
+        <div class="work-item">
+          <h4>ATM & SMatik</h4>
+          <p>Provided design support for ATM feature enhancements and SMatik queue management devices, improving user accessibility and interaction.</p>
         </div>
       </div>
     </section>
